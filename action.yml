@@ -1,4 +1,4 @@
-name: km-get-npm-package-info-action
+name: koumatsumoto/get-npm-package-info-action
 description: Action to get npm package name, version and git commit hash
 
 outputs:
