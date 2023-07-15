@@ -19,6 +19,6 @@ runs:
       shell: bash
       id: get_info
       run: |
-        echo "package_name=`node -p 'require(\"./package.json\").name'`" >> "$GITHUB_OUTPUT"
-        echo "package_version=`node -p 'require(\"./package.json\").version'`" >> "$GITHUB_OUTPUT"
+        echo "package_name=`npm pkg get name | tr -d '\"'`" >> $GITHUB_OUTPUT
+        echo "package_version=`npm pkg get version | tr -d '\"'`" >> $GITHUB_OUTPUT
         echo "git_commit_hash_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
